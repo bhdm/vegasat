@@ -1,0 +1,98 @@
+<div class="title"><div>Категории</div></div>
+<br />
+<div id="category-pattern" style="display: none;">
+    <div class="well">
+        <div class="form-group">
+            <label class="col-xs-2">Категория</label>
+            <div class="col-xs-10">
+                <input type="text" disabled class="category-input">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-2">Название</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-xs-2">Описание</label>
+            <div class="col-xs-10">
+                <textarea class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="categories">
+<div class="well">
+    <div class="form-group">
+        <label class="col-xs-2">Категория</label>
+        <div class="col-xs-10">
+            <input type="text" class="category-input form-control">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-xs-2">Описание</label>
+        <div class="col-xs-10">
+            <textarea class="form-control"></textarea>
+        </div>
+    </div>
+</div>
+</div>
+<button type="button" class="btn btn-primary add-category">Добавить категорию</button>
+
+<script>
+    $(document).ready(function(){
+        function getTree() {
+            var tree = [
+                {
+                    text: "Категория 1",
+                    nodes: [
+                        {
+                            text: "Категория 1 1",
+                            nodes: [
+                                {
+                                    text: "Категория 1 1 1"
+                                },
+                                {
+                                    text: "Категория 1 1 2"
+                                }
+                            ]
+                        },
+                        {
+                            text: "Категория 1 2"
+                        }
+                    ]
+                },
+                {
+                    text: "Категория 2"
+                },
+                {
+                    text: "Категория 3"
+                },
+                {
+                    text: "Категория 4"
+                },
+                {
+                    text: "Категория 5"
+                }
+            ];
+            return tree;
+        }
+
+        $('.add-category').click(function(){
+            var t = $('#category-pattern').html();
+            $('.categories').append(t);
+        });
+
+        $('.category-input').click(function(){
+            $('#selectCategory').modal();
+            $('#tree').treeview({data: getTree()});
+        });
+
+        $('.changeCategory').click(function(){
+            var category = $('.node-tree.node-selected').text();
+            $('.category-input').val(category);
+            $('#selectCategory').modal('hide');
+        });
+    })
+</script>

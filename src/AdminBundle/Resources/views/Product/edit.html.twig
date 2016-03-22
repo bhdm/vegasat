@@ -1,0 +1,38 @@
+{% extends '@Admin/layout.html.twig' %}
+
+{% block body %}
+    <div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Основная информация</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="additional" role="tab" data-toggle="tab">Доп. информация</a></li>
+            <li role="presentation"><a href="#messages" aria-controls="galery" role="tab" data-toggle="tab">Галерея</a></li>
+            <li role="presentation"><a href="#settings" aria-controls="entity" role="tab" data-toggle="tab">Связи</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <form class="form-horizontal">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Название</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div role="tabpanel" class="tab-pane" id="additional">...</div>
+
+
+                <div role="tabpanel" class="tab-pane" id="galery">...</div>
+
+
+                <div role="tabpanel" class="tab-pane" id="entity">...</div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

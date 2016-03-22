@@ -1,0 +1,31 @@
+shop_basket:
+    resource: "@ShopBasketBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+basket:
+    resource: "@BasketBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+#fos_js_routing:
+#    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+#admin_login:
+#    pattern:  /admin/login
+#admin_login_check:
+#    pattern:  /admin/login_check
+#admin_logout:
+#    pattern:  /admin/logout

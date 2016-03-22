@@ -1,0 +1,48 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-xs-8 col-sm-9">
+            <div class="row item">
+                <div class="col-sm-1">
+                    <div class="thumbnail">
+                        <img src="http://vegasat.ru/images/thumb.BN5X0777_9.png" alt="Кабельный ресивер Dr.HD B25 CI+" style="max-width: 35px">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="title"><b><a href="#">Кабельный ресивер Dr.HD B25 CI+</a></b></div>
+                    <div>Тут дополнительный текст</div>
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="Цена">
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="Цена">
+                </div>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" placeholder="Цена">
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-4 col-sm-3">
+            <div class="well">
+                <div class="form-group">
+                    <label>Название категории</label>
+                    <input type="text" class="form-control" value="Категория 1">
+                </div>
+                <div class="form-group">
+                    <label>Родительский элемент</label>
+                    <select class="form-control">
+                        <option value="">Категория 1</option>
+                        <option value="">Категория 2</option>
+                        <option value="">Категория 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-warning">Сохранить</button>
+                    <a href="#" style="float: right">Редактирование</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

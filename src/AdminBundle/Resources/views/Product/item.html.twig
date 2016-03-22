@@ -1,0 +1,29 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block body %}
+    <div style="max-width: 700px">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#main" aria-controls="main" role="tab" data-toggle="tab">Основные</a></li>
+            <li role="presentation"><a href="#price" aria-controls="price" role="tab" data-toggle="tab">Стоимость</a></li>
+            <li role="presentation"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Описание</a></li>
+            {#<li role="presentation"><a href="#seo" aria-controls="seo" role="tab" data-toggle="tab">СЕО</a></li>#}
+            <li role="presentation"><a href="#entity" aria-controls="entity" role="tab" data-toggle="tab">Связи</a></li>
+            <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <form class="form-horizontal">
+            <br />
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="main">{{ include('@Admin/Product/item/main.html.twig') }}</div>
+                <div role="tabpanel" class="tab-pane" id="price">{{ include('@Admin/Product/item/price.html.twig') }}</div>
+                <div role="tabpanel" class="tab-pane" id="desc">{{ include('@Admin/Product/item/desc.html.twig') }}</div>
+                <div role="tabpanel" class="tab-pane" id="seo">{{ include('@Admin/Product/item/seo.html.twig') }}</div>
+                <div role="tabpanel" class="tab-pane" id="entity">{{ include('@Admin/Product/item/entity.html.twig') }}</div>
+                <div role="tabpanel" class="tab-pane" id="settings">...</div>
+            </div>
+        </form>
+
+    </div>
+{% endblock %}

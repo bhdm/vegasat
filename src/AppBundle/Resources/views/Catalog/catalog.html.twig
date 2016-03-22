@@ -1,0 +1,8 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block body %}
+    {% for i in 1..20 %}
+        {{ include('AppBundle:Catalog:listItem.html.twig') }}
+    {% endfor %}
+{% endblock %}
+

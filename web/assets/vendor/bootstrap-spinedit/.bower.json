@@ -1,0 +1,32 @@
+{
+  "name": "bootstrap-spinedit",
+  "homepage": "https://github.com/BrandyMint/bootstrap-spinedit",
+  "authors": [
+    "Alexander Mescheryakov <sibsfinx@ya.ru>"
+  ],
+  "description": "bootstrap spinedit (numeric stepper)",
+  "main": "js/bootstrap-spinedit.js",
+  "keywords": [
+    "spinedit",
+    "bootstrap",
+    "stepper"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "fc6d3240f4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "fc6d3240f4cd35770ab43be1b76e59cf4606efb0"
+  },
+  "_source": "git://github.com/BrandyMint/bootstrap-spinedit.git",
+  "_target": "*",
+  "_originalSource": "bootstrap-spinedit",
+  "_direct": true
+}
