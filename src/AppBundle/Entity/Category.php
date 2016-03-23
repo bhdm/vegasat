@@ -2,6 +2,7 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -42,6 +43,31 @@ class Category
      */
     private $image;
 
+    /**
+     * @ORM\Column(name="enabled", type="boolean", nullable=true)
+     */
+    private $enabled;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Category", inversedBy="childrens")
+     */
+    private $parent;
+
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Category", mappedBy="parent")
+     */
+    private $childrens;
+
+    public function __toString()
+    {
+        return $this->title;
+    }
+
+    public function __construct()
+    {
+        $this->enabled = true;
+        $this->childrens = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -124,5 +150,55 @@ class Category
     {
         return $this->image;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * @param mixed $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getParent()
+    {
+        return $this->parent;
+    }
+
+    /**
+     * @param mixed $parent
+     */
+    public function setParent($parent)
+    {
+        $this->parent = $parent;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getChildrens()
+    {
+        return $this->childrens;
+    }
+
+    /**
+     * @param mixed $childrens
+     */
+    public function setChildrens($childrens)
+    {
+        $this->childrens = $childrens;
+    }
+
+
 }
 

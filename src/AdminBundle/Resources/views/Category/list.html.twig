@@ -1,0 +1,20 @@
+{% extends '@Admin/layout.html.twig' %}
+
+{% block body %}
+    <div>
+        <div class="form-group">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#add-category">Добавить категорию</button>
+        </div>
+
+        <div id="tree" class="treeview">
+            <ul class="list-group">
+                {% for cat in categories %}
+                    <li class="list-group-item node-tree">
+                        <span class="icon node-icon"></span>{{ cat.title }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {{ render(controller("AdminBundle:Category:add" )) }}
+{% endblock %}
