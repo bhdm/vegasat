@@ -8,12 +8,6 @@
         <input type="text" class="form-control" placeholder="Название">
     </div>
 </div>
-{#<div class="form-group">#}
-    {#<label class="col-xs-2">Артикул</label>#}
-    {#<div class="col-xs-10">#}
-        {#<input type="text" class="form-control">#}
-    {#</div>#}
-{#</div>#}
 <div class="form-group">
     <div class="col-xs-5  col-xs-offset-2">
         <input type="text" class="form-control" placeholder="Бренд">
@@ -53,43 +47,20 @@
     <label class="col-xs-2">Фотография</label>
 </div>
 <div class="form-group galery">
-    <div class="col-xs-3">
+
+    <div class="col-xs-3" id="galery-template" style="display: none">
         <div class="thumbnail">
-            <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="opacity: 0.5; cursor: pointer">
-            <div class="caption">
-                <br />
-            </div>
+            <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="cursor: pointer">
         </div>
     </div>
+
     <div class="col-xs-3">
         <div class="thumbnail">
-            <img src="http://vegasat.ru/images/thumb.BN5X0777_9.png" class="img-thumbnail">
-            <div class="caption">
-                <input type="checkbox" checked> Главная
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="thumbnail">
-            <img src="http://vegasat.ru/images/thumb.BN5X0777_9.png" class="img-thumbnail">
-            <div class="caption">
-                <input type="checkbox" > Главная
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="thumbnail">
-            <img src="http://vegasat.ru/images/thumb.BN5X0777_9.png" class="img-thumbnail">
-            <div class="caption">
-                <input type="checkbox" > Главная
-            </div>
-        </div>
-    </div>
-    <div class="col-xs-3">
-        <div class="thumbnail">
-            <img src="http://vegasat.ru/images/thumb.BN5X0777_9.png" class="img-thumbnail">
-            <div class="caption">
-                <input type="checkbox" > Главная
+            <div class="image-upload text-center">
+                <label for="file-input">
+                    <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="opacity: 0.5; cursor: pointer">
+                </label>
+                <input id="file-input" type="file" class="ajax-file"/>
             </div>
         </div>
     </div>

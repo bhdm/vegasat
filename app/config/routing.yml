@@ -29,3 +29,6 @@ fos_user:
 #    pattern:  /admin/login_check
 #admin_logout:
 #    pattern:  /admin/logout
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

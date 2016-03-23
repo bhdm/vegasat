@@ -28,7 +28,8 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "friendsofsymfony/user-bundle": "~2.0@dev",
         "knplabs/knp-paginator-bundle": "~2.5",
-        "gedmo/doctrine-extensions": "~2.4"
+        "gedmo/doctrine-extensions": "~2.4",
+        "friendsofsymfony/jsrouting-bundle": "~1.6"
 
     },
     "require-dev": {
