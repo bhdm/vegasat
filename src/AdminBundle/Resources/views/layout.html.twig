@@ -46,7 +46,7 @@
                             template.css('display', 'block');
                             template.removeAttr('id');
                             template.children('.thumbnail').children('img').attr('src',json.path);
-                            $('.galery').append(template)
+                            $('.galery').prepend(template)
                         }
                     });
                 });
