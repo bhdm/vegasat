@@ -2,6 +2,9 @@
 * {
   color: #333;
 }
+.body {
+  background: #EEE !important;
+}
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -152,4 +155,30 @@
 }
 .navbar {
   background: #EEE;
+}
+.nav.nav-tabs {
+  margin-left: 0;
+}
+#navigation li:hover > ul {
+  display: block;
+  margin-top: -2px;
+}
+#navigation li:hover > ul li:hover > ul {
+  display: block;
+}
+#navigation li:hover > ul li:hover > ul li:hover > ul {
+  margin-top: 0px;
+  margin-left: -2px;
+  display: block;
+}
+.nav-tabs > li > a {
+  color: #444;
+}
+.tree li {
+  padding: 5px;
+  font-size: 17px;
+}
+.btn-primary {
+  border-radius: 0;
+  background: #DDD;
 }
