@@ -7,7 +7,8 @@
     <list default="true" id="5b23757c-6b45-4db4-91f9-26b2107a3f2d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/images/icons/triangle.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Form/ProductType.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Form/ProductType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.css" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less" />
     </list>
     <ignored path="vegasat.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductType.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductType.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Form/ProductType.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="39" />
+              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -78,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="admin.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+            <state relative-caret-position="517">
+              <caret line="134" column="14" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -114,7 +115,7 @@
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
-              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+              <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -198,9 +199,9 @@
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/item/main.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/item/desc.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/item.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Form/ProductType.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less" />
       </list>
     </option>
   </component>
@@ -528,12 +529,12 @@
       <workItem from="1460490917498" duration="616000" />
       <workItem from="1460582365213" duration="1680000" />
       <workItem from="1460654642164" duration="277000" />
-      <workItem from="1460663511883" duration="4852000" />
+      <workItem from="1460663511883" duration="4938000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11474000" />
+    <option name="totallyTimeSpent" value="11560000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -934,18 +935,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
-          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+          <caret line="53" column="1" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -963,7 +956,15 @@
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Form/ProductType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="39" />
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="134" column="14" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
           <folding />
         </state>
       </provider>

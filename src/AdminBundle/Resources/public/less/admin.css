@@ -141,3 +141,6 @@ h3 {
   margin-top: 2px;
   background: #E8E8E8;
 }
+textarea {
+  height: 55px;
+}
