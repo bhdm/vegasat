@@ -14,11 +14,11 @@ class ProductType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('code', null, ['attr' => ['placeholder' => 'Артикул']])
-            ->add('brand', null, ['attr' => ['placeholder' => 'Бренд']])
-            ->add('model', null, ['attr' => ['placeholder' => 'Модель']])
-            ->add('title', TextType::class, ['label' => 'Название'])
-            ->add('slug', TextType::class, ['attr' => ['placeholder' => 'URL']])
+            ->add('code', null, ['attr' => ['placeholder' => '']])
+            ->add('brand', null, ['attr' => ['placeholder' => '']])
+            ->add('model', null, ['attr' => ['placeholder' => '']])
+            ->add('title', TextType::class, ['label' => ''])
+            ->add('slug', TextType::class, ['attr' => ['placeholder' => '']])
             ->add('description', TextareaType::class, ['attr' => ['class' => 'ckeditor']])
             ->add('shortDescription', TextareaType::class, ['attr' => ['class' => 'ckeditor']])
             ->add('metaTitle', TextType::class, ['required' => false])
