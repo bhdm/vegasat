@@ -81,8 +81,8 @@
       <file leaf-file-name="admin.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="517">
-              <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+            <state relative-caret-position="553">
+              <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -494,12 +494,12 @@
       <workItem from="1460490917498" duration="616000" />
       <workItem from="1460582365213" duration="1680000" />
       <workItem from="1460654642164" duration="277000" />
-      <workItem from="1460663511883" duration="4079000" />
+      <workItem from="1460663511883" duration="4213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10701000" />
+    <option name="totallyTimeSpent" value="10835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -928,8 +928,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+        <state relative-caret-position="553">
+          <caret line="132" column="1" selection-start-line="132" selection-start-column="1" selection-end-line="132" selection-end-column="1" />
           <folding />
         </state>
       </provider>
