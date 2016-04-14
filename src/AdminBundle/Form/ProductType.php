@@ -22,8 +22,8 @@ class ProductType extends AbstractType
             ->add('description', TextareaType::class, ['attr' => ['class' => 'ckeditor']])
             ->add('shortDescription', TextareaType::class, ['attr' => ['class' => 'ckeditor']])
             ->add('metaTitle', TextType::class, ['required' => false])
-            ->add('metaKeyword', TextType::class, ['required' => false])
-            ->add('metaDescription', TextType::class, ['required' => false])
+            ->add('metaKeyword', TextareaType::class, ['required' => false])
+            ->add('metaDescription', TextareaType::class, ['required' => false])
 //            ->add('price', IntegerType::class)
 //            ->add('priceSale', IntegerType::class)
         ;
