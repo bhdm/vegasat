@@ -7,7 +7,6 @@
     <list default="true" id="5b23757c-6b45-4db4-91f9-26b2107a3f2d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/images/icons/triangle.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.css" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less" />
     </list>
     <ignored path="vegasat.iws" />
@@ -83,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="517">
-              <caret line="134" column="14" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
+              <caret line="134" column="6" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -529,12 +528,12 @@
       <workItem from="1460490917498" duration="616000" />
       <workItem from="1460582365213" duration="1680000" />
       <workItem from="1460654642164" duration="277000" />
-      <workItem from="1460663511883" duration="4938000" />
+      <workItem from="1460663511883" duration="4977000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11560000" />
+    <option name="totallyTimeSpent" value="11599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -964,7 +963,7 @@
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/public/less/admin.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="517">
-          <caret line="134" column="14" selection-start-line="134" selection-start-column="14" selection-end-line="134" selection-end-column="14" />
+          <caret line="134" column="6" selection-start-line="134" selection-start-column="6" selection-end-line="134" selection-end-column="6" />
           <folding />
         </state>
       </provider>
