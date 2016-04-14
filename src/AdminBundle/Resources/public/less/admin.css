@@ -131,3 +131,8 @@ h3 {
   background-color: #B90515;
   border-color: #9E3B3B;
 }
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  font-weight: bold;
+}
