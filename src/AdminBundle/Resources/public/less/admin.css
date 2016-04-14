@@ -16,7 +16,7 @@ h3 {
   font-weight: bold;
 }
 .title div {
-  border-bottom: 3px solid #CCC;
+  border-bottom: 0;
   display: inline-block;
   padding: 5px 10px;
 }
