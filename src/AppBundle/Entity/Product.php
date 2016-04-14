@@ -23,6 +23,13 @@ class Product extends BaseEntity
     /**
      * @var string
      *
+     * @ORM\Column(name="vendorCode", type="string", length=255, nullable=true)
+     */
+    private $code;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="title", type="string", length=255, nullable=true)
      */
     private $title;
@@ -58,9 +65,16 @@ class Product extends BaseEntity
     /**
      * @var string
      *
-     * @ORM\Column(name="descrption", type="text", nullable=true)
+     * @ORM\Column(name="description", type="text", nullable=true)
      */
-    private $descrption;
+    private $description;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="shortDescription", type="text", nullable=true)
+     */
+    private $shortDescription;
 
     /**
      * @var float
@@ -72,21 +86,21 @@ class Product extends BaseEntity
     /**
      * @var float
      *
-     * @ORM\Column(name="priceUsd", type="decimal", precision=10, scale=2)
+     * @ORM\Column(name="priceUsd", type="decimal", precision=10, scale=2, nullable=true)
      */
     private $priceUsd;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="priceSale", type="decimal", precision=10, scale=2)
+     * @ORM\Column(name="priceSale", type="decimal", precision=10, scale=2, nullable=true)
      */
     private $priceSale;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="priceWholesale", type="decimal", precision=10, scale=2)
+     * @ORM\Column(name="priceWholesale", type="decimal", precision=10, scale=2, nullable=true)
      */
     private $priceWholesale;
 
@@ -101,7 +115,7 @@ class Product extends BaseEntity
     /**
      * @var float
      *
-     * @ORM\Column(name="weight", type="decimal", precision=10, scale=2)
+     * @ORM\Column(name="weight", type="decimal", precision=10, scale=2, nullable=true)
      */
     private $weight;
 
@@ -136,6 +150,27 @@ class Product extends BaseEntity
      */
     private $page;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $metaTitle;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $metaKeyword;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $metaDescription;
+
 
     public function __construct()
     {
@@ -143,6 +178,7 @@ class Product extends BaseEntity
         $this->image = array();
         $this->images = new ArrayCollection();
         $this->equipment = new ArrayCollection();
+        $this->status = 0;
     }
 
     /**
@@ -242,27 +278,27 @@ class Product extends BaseEntity
     }
 
     /**
-     * Set descrption
+     * Set description
      *
-     * @param string $descrption
+     * @param string $description
      *
      * @return Product
      */
-    public function setDescrption($descrption)
+    public function setDescription($description)
     {
-        $this->descrption = $descrption;
+        $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get descrption
+     * Get description
      *
      * @return string
      */
-    public function getDescrption()
+    public function getDescription()
     {
-        return $this->descrption;
+        return $this->description;
     }
 
     /**
@@ -488,6 +524,88 @@ class Product extends BaseEntity
     {
         $this->page = $page;
     }
+
+    /**
+     * @return string
+     */
+    public function getShortDescription()
+    {
+        return $this->shortDescription;
+    }
+
+    /**
+     * @param string $shortDescription
+     */
+    public function setShortDescription($shortDescription)
+    {
+        $this->shortDescription = $shortDescription;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMetaTitle()
+    {
+        return $this->metaTitle;
+    }
+
+    /**
+     * @param string $metaTitle
+     */
+    public function setMetaTitle($metaTitle)
+    {
+        $this->metaTitle = $metaTitle;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMetaKeyword()
+    {
+        return $this->metaKeyword;
+    }
+
+    /**
+     * @param string $metaKeyword
+     */
+    public function setMetaKeyword($metaKeyword)
+    {
+        $this->metaKeyword = $metaKeyword;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMetaDescription()
+    {
+        return $this->metaDescription;
+    }
+
+    /**
+     * @param string $metaDescription
+     */
+    public function setMetaDescription($metaDescription)
+    {
+        $this->metaDescription = $metaDescription;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * @param string $code
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+    }
+
+    
 
 }
 

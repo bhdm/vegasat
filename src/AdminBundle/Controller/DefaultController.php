@@ -18,4 +18,9 @@ class DefaultController extends Controller
             return $this->redirectToRoute('admin_product_list');
         }
     }
+
+    public function csrfTokenAction(){
+        $csrfToken = $this->get('security.csrf.token_manager')->getToken('authenticate');
+        return $this->render('AdminBundle:Defaults:csrfToken.html.twig', ['csrf_token' => $csrfToken]);
+    }
 }

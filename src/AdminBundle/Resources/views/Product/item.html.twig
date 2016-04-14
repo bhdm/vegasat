@@ -20,10 +20,11 @@
             </div>
             <div class="col-xs-8">
                 <!-- Tab panes -->
-                <form class="form-horizontal">
+                {{ form_start(form, {'class' : 'form-horizontal'}) }}
+                {{ form_errors(form) }}
                     <div class="tab-content">
                         <div>
-                            <button class="btn btn-primary" style="float: right"><span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Сохранить</button>
+                            <button class="btn btn-primary"  type="submit" style="float: right"><span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Сохранить</button>
                         </div>
                         <div role="tabpanel" class="tab-pane active" id="main">{{ include('@Admin/Product/item/main.html.twig') }}</div>
                         <div role="tabpanel" class="tab-pane" id="desc">{{ include('@Admin/Product/item/desc.html.twig') }}</div>
@@ -37,7 +38,9 @@
                             <button class="btn btn-primary" style="float: right">Далее&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></button>
                         </div>
                     </div>
-                </form>
+                    {#{{ render(controller('AdminBundle:Default:csrfToken')) }}#}
+
+                {{ form_end(form) }}
             </div>
         </div>
     </div>
