@@ -7,7 +7,6 @@
     <list default="true" id="5b23757c-6b45-4db4-91f9-26b2107a3f2d" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/public/images/icons/triangle.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Form/ProductType.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Form/ProductType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/item/main.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/item/main.html.twig" />
     </list>
     <ignored path="vegasat.iws" />
@@ -128,8 +127,8 @@
       <file leaf-file-name="main.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/item/main.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+            <state relative-caret-position="198">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -441,12 +440,12 @@
       <workItem from="1460490917498" duration="616000" />
       <workItem from="1460582365213" duration="1680000" />
       <workItem from="1460654642164" duration="277000" />
-      <workItem from="1460663511883" duration="3059000" />
+      <workItem from="1460663511883" duration="3096000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9681000" />
+    <option name="totallyTimeSpent" value="9718000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -874,8 +873,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Product/item/main.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+        <state relative-caret-position="198">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
