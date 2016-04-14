@@ -1,0 +1,22 @@
+<div class="title"><div>Галарея товара</div></div>
+<br />
+
+<div class="form-group galery">
+
+    <div class="col-xs-3" id="galery-template" style="display: none">
+        <div class="thumbnail">
+            <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="cursor: pointer">
+        </div>
+    </div>
+
+    <div class="col-xs-3">
+        <div class="thumbnail">
+            <div class="image-upload text-center">
+                <label for="file-input">
+                    <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="opacity: 0.5; cursor: pointer">
+                </label>
+                <input id="file-input" type="file" class="ajax-file"/>
+            </div>
+        </div>
+    </div>
+</div>

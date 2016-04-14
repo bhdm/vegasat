@@ -1,4 +1,5 @@
-<h3>Основная информация о товаре</h3>
+<div class="title"><div>Основная информация о товаре</div></div>
+<br />
 
 <div class="form-group">
     <label class="col-xs-2">Название</label>
@@ -29,70 +30,5 @@
         <input type="text" class="form-control">
     </div>
 </div>
-
-<div class="form-group">
-    <label class="col-xs-2">Цены</label>
-    <div class="col-xs-3">
-        <input type="text" class="form-control" placeholder="Основная">
-    </div>
-    <div class="col-xs-3">
-        <input type="text" class="form-control" placeholder="По акции">
-    </div>
-    <div class="col-xs-4">
-        <input type="text" class="form-control" placeholder="Опт">
-    </div>
-</div>
-<div class="title"><div>Фотографии</div></div>
-<br />
-<div class="form-group">
-    <label class="col-xs-2">Фотография</label>
-</div>
-<div class="form-group galery">
-
-    <div class="col-xs-3" id="galery-template" style="display: none">
-        <div class="thumbnail">
-            <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="cursor: pointer">
-        </div>
-    </div>
-
-    <div class="col-xs-3">
-        <div class="thumbnail">
-            <div class="image-upload text-center">
-                <label for="file-input">
-                    <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="opacity: 0.5; cursor: pointer">
-                </label>
-                <input id="file-input" type="file" class="ajax-file"/>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="title"><div>Категории</div></div>
-<br />
-    <ul class="tree" style="list-style: none">
-        <li>
-            <input type="checkbox"> Категория 1
-            <ul style="list-style: none">
-                <li>
-                    <input type="checkbox"> Категория 1
-                    <ul style="list-style: none">
-                        <li>
-                            <input type="checkbox"> Категория 1
-                        </li>
-                        <li>
-                            <input type="checkbox"> Категория 1
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <input type="checkbox"> Категория 1
-                </li>
-            </ul>
-        </li>
-        <li>
-            <input type="checkbox"> Категория 2
-        </li>
-    </ul>
-<br />
-{#<a href="/admin/catalog/product/add" class="button glyphicon glyphicon-adjust" title="Add"><span class=""> Добавить</span></a>#}
 
 

@@ -9,11 +9,11 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#main" aria-controls="main" role="tab" data-toggle="tab">Основные</a></li>
                         <li role="presentation"><a href="#desc" aria-controls="desc" role="tab" data-toggle="tab">Описание</a></li>
-                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Фотографии</a></li>
+                        <li role="presentation"><a href="#photo" aria-controls="photo" role="tab" data-toggle="tab">Фотографии</a></li>
                         <li role="presentation"><a href="#seo" aria-controls="seo" role="tab" data-toggle="tab">Мета</a></li>
-                        <li role="presentation"><a href="#seo" aria-controls="seo" role="tab" data-toggle="tab">Категории</a></li>
+                        <li role="presentation"><a href="#category" aria-controls="category" role="tab" data-toggle="tab">Категории</a></li>
                         <li role="presentation"><a href="#price" aria-controls="price" role="tab" data-toggle="tab">Цены</a></li>
-                        <li role="presentation"><a href="#entity" aria-controls="entity" role="tab" data-toggle="tab">Связи</a></li>
+                        {#<li role="presentation"><a href="#entity" aria-controls="entity" role="tab" data-toggle="tab">Связи</a></li>#}
                         <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки</a></li>
                     </ul>
                 </div>
@@ -23,17 +23,18 @@
                 <form class="form-horizontal">
                     <div class="tab-content">
                         <div>
-                            <button class="btn btn-primary" style="float: right">Сохранить</button>
+                            <button class="btn btn-primary" style="float: right"><span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Сохранить</button>
                         </div>
                         <div role="tabpanel" class="tab-pane active" id="main">{{ include('@Admin/Product/item/main.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="price">{{ include('@Admin/Product/item/price.html.twig') }}</div>
                         <div role="tabpanel" class="tab-pane" id="desc">{{ include('@Admin/Product/item/desc.html.twig') }}</div>
+                        <div role="tabpanel" class="tab-pane" id="photo">{{ include('@Admin/Product/item/galery.html.twig') }}</div>
+                        <div role="tabpanel" class="tab-pane" id="price">{{ include('@Admin/Product/item/price.html.twig') }}</div>
                         <div role="tabpanel" class="tab-pane" id="seo">{{ include('@Admin/Product/item/seo.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="entity">{{ include('@Admin/Product/item/entity.html.twig') }}</div>
+                        <div role="tabpanel" class="tab-pane" id="category">{{ include('@Admin/Product/item/category.html.twig') }}</div>
                         <div role="tabpanel" class="tab-pane" id="settings">...</div>
                         <div>
-                            <button class="btn btn-primary" style="float: left">назад</button>
-                            <button class="btn btn-primary" style="float: right">Далее</button>
+                            <button class="btn btn-primary" style="float: left"><span class="glyphicon glyphicon-arrow-left">&nbsp;</span>Назад</button>
+                            <button class="btn btn-primary" style="float: right">Далее&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></button>
                         </div>
                     </div>
                 </form>

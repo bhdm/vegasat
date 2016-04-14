@@ -1,4 +1,4 @@
-<div class="title"><div>Категории</div></div>
+<div class="title"><div>Категории товара</div></div>
 <br />
 <div id="category-pattern" style="display: none;">
     <div class="well">
@@ -23,23 +23,26 @@
     </div>
 </div>
 <div class="categories">
-<div class="well">
-    <div class="form-group">
-        <label class="col-xs-2">Категория</label>
-        <div class="col-xs-10">
-            <input type="text" class="category-input form-control">
+    <div class="well">
+        <div class="form-group">
+            <label class="col-xs-2">Категория</label>
+            <div class="col-xs-10">
+                <input type="text" class="category-input form-control">
+            </div>
         </div>
-    </div>
-    <div class="form-group">
-        <label class="col-xs-2">Описание</label>
-        <div class="col-xs-10">
-            <textarea class="form-control"></textarea>
+        <div class="form-group">
+            <label class="col-xs-2">Описание</label>
+            <div class="col-xs-10">
+                <textarea class="form-control"></textarea>
+            </div>
         </div>
     </div>
 </div>
+<div class="text-right">
+    <button type="button" class="btn btn-primary add-category">Добавить категорию</button>
 </div>
-<button type="button" class="btn btn-primary add-category">Добавить категорию</button>
-
+<br />
+<br />
 <script>
     $(document).ready(function(){
         function getTree() {
