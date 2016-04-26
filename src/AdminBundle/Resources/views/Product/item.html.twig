@@ -14,10 +14,10 @@
                         <li role="presentation"><a href="#category" aria-controls="category" role="tab" data-toggle="tab">Привязка к категориям</a></li>
                         <li role="presentation"><a href="#price" aria-controls="price" role="tab" data-toggle="tab">Стоимость и доставка</a></li>
 
-                        <li role="presentation"><a href="#entity" aria-controls="entity" role="tab" data-toggle="tab">Технические характеристики</a></li>
-                        <li role="presentation"><a href="#entity" aria-controls="entity" role="tab" data-toggle="tab">Рекомендованные товары</a></li>
-                        <li role="presentation"><a href="#entity" aria-controls="entity" role="tab" data-toggle="tab">Комплектация</a></li>
-                        <li role="presentation"><a href="#entity" aria-controls="entity" role="tab" data-toggle="tab">Аналоги</a></li>
+                        <li role="presentation"><a href="#specification" aria-controls="entity" role="tab" data-toggle="tab">Технические характеристики</a></li>
+                        <li role="presentation"><a href="#recomendation" aria-controls="entity" role="tab" data-toggle="tab">Рекомендованные товары</a></li>
+                        <li role="presentation"><a href="#complectation" aria-controls="entity" role="tab" data-toggle="tab">Комплектация</a></li>
+                        <li role="presentation"><a href="#analogs" aria-controls="entity" role="tab" data-toggle="tab">Аналоги</a></li>
 
                         {#<li role="presentation"><a href="#entity" aria-controls="entity" role="tab" data-toggle="tab"></a></li>#}
                         <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Настройки</a></li>
@@ -40,7 +40,9 @@
                         <div role="tabpanel" class="tab-pane" id="price">{{ include('@Admin/Product/item/price.html.twig') }}</div>
                         <div role="tabpanel" class="tab-pane" id="seo">{{ include('@Admin/Product/item/seo.html.twig') }}</div>
                         <div role="tabpanel" class="tab-pane" id="category">{{ include('@Admin/Product/item/category.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                        <div role="tabpanel" class="tab-pane" id="specification">{{ include('@Admin/Product/item/specification.html.twig') }}</div>
+                        <div role="tabpanel" class="tab-pane" id="recomendation">{{ include('@Admin/Product/item/recomendation.html.twig') }}</div>
+                        <div role="tabpanel" class="tab-pane" id="complectation">{{ include('@Admin/Product/item/complectation.html.twig') }}</div>
                         <div>
                             <button class="btn btn-primary" style="float: left"><span class="glyphicon glyphicon-arrow-left">&nbsp;</span>Назад</button>
                             <button class="btn btn-primary" style="float: right">Далее&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></button>

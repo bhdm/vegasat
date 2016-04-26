@@ -144,3 +144,7 @@ h3 {
 textarea {
   max-height: 55px;
 }
+.treeview ul li span.icon {
+  display: inline;
+  background: none;
+}

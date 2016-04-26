@@ -19,6 +19,7 @@
         <script src="{{ asset('assets/vendor/ckeditor/lang/ru.js') }}"></script>
         <script src="{{ asset('assets/vendor/ckeditor/ckeditor.js') }}"></script>
         {#<script src="{{ asset('bundles/admin/javascripts/admin.js') }}"></script>#}
+        <script src="{{ asset('assets/vendor/typeahead.js/dist/typeahead.bundle.min.js') }}"></script>
 
         <script>
             $(document).ready(function(){
@@ -63,6 +64,22 @@
             .image-upload > input
             {
                 display: none;
+            }
+
+            .twitter-typeahead{
+                width: 100%;
+            }
+            .tt-menu{
+                width: 100%;
+                cursor: pointer;
+                background: #FFF;
+                border: 1px solid #DDD;
+            }
+            .tt-suggestion.tt-selectable {
+                padding: 5px 10px;
+            }
+            .tt-suggestion.tt-selectable:hover{
+                background: #EEE;
             }
         </style>
     {% endblock %}

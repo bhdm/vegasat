@@ -1,0 +1,55 @@
+<div class="title"><div>Комплектация</div></div>
+<br />
+
+<div class="products">
+    <div class="well">
+        <div class="form-group">
+            <label class="col-xs-2">Товар</label>
+            <div class="col-xs-10">
+                <input type="text" class="form-control ajax-product">
+                <input type="hidden" name="complect">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="text-right">
+    <button type="button" class="btn btn-primary add-category">Добавить товар</button>
+</div>
+<br />
+<br />
+<script>
+    var substringMatcher = function(strs) {
+        return function findMatches(q, cb) {
+            var matches, substringRegex;
+
+            // an array that will be populated with substring matches
+            matches = [];
+
+            // regex used to determine if a string contains the substring `q`
+            substrRegex = new RegExp(q, 'i');
+
+            // iterate through the pool of strings and for any string that
+            // contains the substring `q`, add it to the `matches` array
+            $.each(strs, function(i, str) {
+                if (substrRegex.test(str)) {
+                    matches.push(str);
+                }
+            });
+
+            cb(matches);
+        };
+    };
+
+    var states = ['Категория 1 - Товар 1', 'Категория 1 - Товар 2', 'Категория 2 - товар 2'
+    ];
+
+    $('.ajax-product').typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1
+            },
+            {
+                name: 'states',
+                source: substringMatcher(states)
+            });
+</script>

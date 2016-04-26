@@ -1,0 +1,47 @@
+<div class="title"><div>Технические характеристики</div></div>
+<br />
+<div class="form-group">
+    <label class="col-xs-2">Название характеристики</label>
+    <div class="col-xs-10">
+        <input type="text" class="form-control" name="title">
+    </div>
+</div>
+<div class="form-group">
+    <label class="col-xs-2">Значение</label>
+    <div class="col-xs-10">
+        <input type="text" class="form-control" name="value">
+    </div>
+</div>
+<textarea name="" id="copypaste" class="form-control" style="width: 100%"></textarea>
+
+<br />
+<table class="table" style="font-size: 13px">
+    <tr>
+        <th>Название</th>
+        <th>Значение</th>
+    </tr>
+    <tr>
+        <td>Ширина</td>
+        <td><input type="text" class="form-control" value="300см"></td>
+    </tr>
+    <tr>
+        <td>Высота</td>
+        <td><input type="text" class="form-control" value="150см"></td>
+    </tr>
+</table>
+<script>
+    $(document).ready(function () {
+        $('#copypaste').bind('paste', function(e) {
+            var data = e.originalEvent.clipboardData.getData('Text');
+            var text = '';
+            Array.prototype.forEach.call(data.split('\n'), function (a) {
+                text += '<tr>';
+                var b = a.split('\t');
+                text += '<td>'+b[0]+'</td>';
+                text += '<td><input type="text" class="form-control" value="'+b[1]+'"></td>';
+                text += '</tr>';
+            });
+            $('.table').append(text);
+        });
+    })
+</script>
