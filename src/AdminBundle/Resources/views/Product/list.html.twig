@@ -3,26 +3,27 @@
 {% block body %}
     <div class="row">
         <div class="col-xs-8 col-sm-9">
-            <div class="row item">
-                <div class="col-sm-1">
-                    <div class="thumbnail">
-                        <img src="http://vegasat.ru/images/thumb.BN5X0777_9.png" alt="Кабельный ресивер Dr.HD B25 CI+" style="max-width: 35px">
+            {% for p in products %}
+                <div class="row item">
+                    <div class="col-sm-1">
+                        <div class="thumbnail">
+                            <img src="http://vegasat.ru/images/thumb.BN5X0777_9.png" alt="Кабельный ресивер Dr.HD B25 CI+" style="max-width: 35px">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="title"><b><a href="#">{{ p.brand }} {{ p.model }} {{ p.title }}</a></b></div>
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" placeholder="Цена" value="{{ p.price }}">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" placeholder="Цена" value="{{ p.priceSale }}">
+                    </div>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" placeholder="Цена" value="{{ p.priceWholesale }}">
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="title"><b><a href="#">Кабельный ресивер Dr.HD B25 CI+</a></b></div>
-                    <div>Тут дополнительный текст</div>
-                </div>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control" placeholder="Цена">
-                </div>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control" placeholder="Цена">
-                </div>
-                <div class="col-sm-2">
-                    <input type="text" class="form-control" placeholder="Цена">
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <div class="col-xs-4 col-sm-3">
             <div class="well">

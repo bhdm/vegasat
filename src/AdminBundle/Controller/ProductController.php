@@ -27,7 +27,8 @@ class ProductController extends Controller
      */
     public function listAction()
     {
-        return [];
+        $products = $this->getDoctrine()->getRepository('AppBundle:Product')->findAll();
+        return ['products' => $products];
     }
 
     /**
