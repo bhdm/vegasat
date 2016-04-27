@@ -34,4 +34,14 @@ class ProductRepository extends EntityRepository
         return $result;
     }
 
+    public function findAllBrans()
+    {
+        $result = $this->createQueryBuilder('p')
+            ->groupBy('p.brand')
+            ->orderBy('p.brand', 'ASC')
+            ->getQuery()->getResult();
+        return $result;
+    }
+
+
 }

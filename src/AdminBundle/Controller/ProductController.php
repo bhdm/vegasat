@@ -56,7 +56,9 @@ class ProductController extends Controller
             $em->flush($product);
             return $this->redirectToRoute('admin_product_list');
         }
+        
+        $brands = $this->getDoctrine()->getRepository('AppBundle:Product')->findAllBrans();
 
-        return ['form' => $form->createView()];
+        return ['form' => $form->createView(), 'brands' => $brands];
     }
 }

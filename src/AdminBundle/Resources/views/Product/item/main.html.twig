@@ -40,3 +40,19 @@
     </div>
 </div>
 
+<script>
+
+    var states = [
+        {% for brand in brands %} '{{ brand.brand }}'{{ brand != brands | last ? ', ' : '' }} {% endfor %}
+    ];
+
+    $('#product_brand').typeahead({
+                hint: true,
+                highlight: true,
+                minLength: 1
+            },
+            {
+                name: 'states',
+                source: substringMatcher(states)
+            });
+</script>

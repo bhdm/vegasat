@@ -1,5 +1,25 @@
 {% extends "AdminBundle::layout.html.twig" %}
 
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        var substringMatcher = function(strs) {
+            return function findMatches(q, cb) {
+                var matches, substringRegex;
+                matches = [];
+                substrRegex = new RegExp(q, 'i');
+                $.each(strs, function(i, str) {
+                    if (substrRegex.test(str)) {
+                        matches.push(str);
+                    }
+                });
+
+                cb(matches);
+            };
+        };
+    </script>
+{% endblock %}
+
 {% block body %}
     <div class="well">
         <div class="row">
@@ -28,27 +48,27 @@
                 <!-- Tab panes -->
                 {{ form_start(form, {'class' : 'form-horizontal'}) }}
                 {{ form_errors(form) }}
-                    <div class="tab-content">
-                        <div class="text-right">
-                            <button class="btn btn-primary"  type="submit" style=""><span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Сохранить</button>
-                            <button class="btn btn-primary"  type="submit" style=""><span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Сохранить и закрыть</button>
-                        </div>
-                        <br />
-                        <div role="tabpanel" class="tab-pane active" id="main">{{ include('@Admin/Product/item/main.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="desc">{{ include('@Admin/Product/item/desc.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="photo">{{ include('@Admin/Product/item/galery.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="price">{{ include('@Admin/Product/item/price.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="seo">{{ include('@Admin/Product/item/seo.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="category">{{ include('@Admin/Product/item/category.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="specification">{{ include('@Admin/Product/item/specification.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="recomendation">{{ include('@Admin/Product/item/recomendation.html.twig') }}</div>
-                        <div role="tabpanel" class="tab-pane" id="complectation">{{ include('@Admin/Product/item/complectation.html.twig') }}</div>
-                        <div>
-                            <button class="btn btn-primary" style="float: left"><span class="glyphicon glyphicon-arrow-left">&nbsp;</span>Назад</button>
-                            <button class="btn btn-primary" style="float: right">Далее&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></button>
-                        </div>
+                <div class="tab-content">
+                    <div class="text-right">
+                        <button class="btn btn-primary"  type="submit" style=""><span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Сохранить</button>
+                        <button class="btn btn-primary"  type="submit" style=""><span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Сохранить и закрыть</button>
                     </div>
-                    {#{{ render(controller('AdminBundle:Default:csrfToken')) }}#}
+                    <br />
+                    <div role="tabpanel" class="tab-pane active" id="main">{{ include('@Admin/Product/item/main.html.twig') }}</div>
+                    <div role="tabpanel" class="tab-pane" id="desc">{{ include('@Admin/Product/item/desc.html.twig') }}</div>
+                    <div role="tabpanel" class="tab-pane" id="photo">{{ include('@Admin/Product/item/galery.html.twig') }}</div>
+                    <div role="tabpanel" class="tab-pane" id="price">{{ include('@Admin/Product/item/price.html.twig') }}</div>
+                    <div role="tabpanel" class="tab-pane" id="seo">{{ include('@Admin/Product/item/seo.html.twig') }}</div>
+                    <div role="tabpanel" class="tab-pane" id="category">{{ include('@Admin/Product/item/category.html.twig') }}</div>
+                    <div role="tabpanel" class="tab-pane" id="specification">{{ include('@Admin/Product/item/specification.html.twig') }}</div>
+                    <div role="tabpanel" class="tab-pane" id="recomendation">{{ include('@Admin/Product/item/recomendation.html.twig') }}</div>
+                    <div role="tabpanel" class="tab-pane" id="complectation">{{ include('@Admin/Product/item/complectation.html.twig') }}</div>
+                    <div>
+                        <button class="btn btn-primary" style="float: left"><span class="glyphicon glyphicon-arrow-left">&nbsp;</span>Назад</button>
+                        <button class="btn btn-primary" style="float: right">Далее&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></button>
+                    </div>
+                </div>
+                {#{{ render(controller('AdminBundle:Default:csrfToken')) }}#}
 
                 {{ form_end(form) }}
             </div>
