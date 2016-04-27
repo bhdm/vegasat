@@ -1,0 +1,10 @@
+{% for cat in categories %}
+    <li class="list-group-item node-tree" style="padding-left: 20px">
+        <span class="glyphicon glyphicon-folder-open"></span>&nbsp;&nbsp;&nbsp;&nbsp;{{ cat.title }}
+        {% if cat.childrens | length > 0 %}
+            <ul>
+                {{ include('@Admin/Category/recursive-item.html.twig', {'categories' : cat.childrens }) }}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}

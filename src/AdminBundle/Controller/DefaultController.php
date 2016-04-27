@@ -2,6 +2,7 @@
 
 namespace AdminBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
@@ -22,5 +23,14 @@ class DefaultController extends Controller
     public function csrfTokenAction(){
         $csrfToken = $this->get('security.csrf.token_manager')->getToken('authenticate');
         return $this->render('AdminBundle:Defaults:csrfToken.html.twig', ['csrf_token' => $csrfToken]);
+    }
+
+
+    /**
+     * @Template("@Admin/navigation.html.twig")
+     */
+    public function navigationAction(){
+        $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findBy(['enabled' => true]);
+        return ['categories' => $categories];
     }
 }

@@ -1,48 +1,32 @@
 <ul id="navigation">
     <li>
-        <a href="/admin/dashboard/index" id="menu-"><span class="icon "></span>Главная</a>
+        <a href="#" id="menu-"><span class="icon "></span>Главная</a>
     </li>
     <li>
-        <a href="/admin/catalog/product/index" id="menu-catalog"><span class="icon catalog"></span>Каталог</a>
+        <a href="{{ path('admin_category_list') }}" id="menu-catalog"><span class="icon catalog"></span>Каталог</a>
         <ul class="" style="">
-            <li>
-                <a href="/admin/catalog/product/index">Эфирное ТВ</a>
-            </li>
-            <li>
-                <a style="cursor: pointer;">Спутниковое ТВ</a>
-                <ul class="" style="">
-                    <li>
-                        <a href="/admin/attribute/group/index">Спутниковые комплекты</a>
-                        <ul class="" style="">
-                            <a style="cursor: pointer;">Спутниковое ТВ</a>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/admin/attribute/index">Спутниковые ресиверы</a>
-                    </li>
-                    <li>
-                        <a href="/admin/attribute/value/index">Спутниковые антенны</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="/admin/catalog/category/index">Categories</a>
-            </li>
-            <li>
-                <a href="/admin/catalog/producer/index">Producers</a>
-            </li>
-            <li>
-                <a href="/admin/catalog/deliverer/index">Deliverers</a>
-            </li>
-            <li>
-                <a href="/admin/availability/index">Availability</a>
-            </li>
-            <li>
-                <a href="/admin/catalog/product/status/index">Product statuses</a>
-            </li>
-            <li>
-                <a href="/admin/catalog/product/review/index">Reviews</a>
-            </li>
+            {% for cat in categories %}
+                <li>
+                    <a href="{{ path('admin_product_list') }}">{{ cat.title }}</a>
+                </li>
+            {% endfor %}
+            {#<li>#}
+                {#<a style="cursor: pointer;">Спутниковое ТВ</a>#}
+                {#<ul class="" style="">#}
+                    {#<li>#}
+                        {#<a href="/admin/attribute/group/index">Спутниковые комплекты</a>#}
+                        {#<ul class="" style="">#}
+                            {#<a style="cursor: pointer;">Спутниковое ТВ</a>#}
+                        {#</ul>#}
+                    {#</li>#}
+                    {#<li>#}
+                        {#<a href="/admin/attribute/index">Спутниковые ресиверы</a>#}
+                    {#</li>#}
+                    {#<li>#}
+                        {#<a href="/admin/attribute/value/index">Спутниковые антенны</a>#}
+                    {#</li>#}
+                {#</ul>#}
+            {#</li>#}
         </ul>
     </li>
     {#<li>#}

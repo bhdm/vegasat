@@ -22,7 +22,7 @@ class CategoryController extends Controller
      */
     public function listAction()
     {
-        $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findBy([]);
+        $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findBy(['enabled' => true, 'parent' => null]);
 
         return ['categories' => $categories];
     }
