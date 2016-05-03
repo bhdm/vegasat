@@ -39,7 +39,7 @@ class BaseEntity
      *
      * @ORM\Column(name="enabled", type="boolean", nullable=true)
      */
-    protected $enabled = 1;
+    protected $enabled = true;
     /**
      * @var \DateTime
      *
