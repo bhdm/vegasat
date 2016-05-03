@@ -1,22 +1,71 @@
 <div class="title"><div>Галарея товара</div></div>
 <br />
-
-<div class="form-group galery">
-
-    <div class="col-xs-3" id="galery-template" style="display: none">
-        <div class="thumbnail">
+<ol class="form-group galery">
+    <li class="col-xs-3" id="galery-template" style="display: none">
+        <div class="thumbnail image-galery">
             <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="cursor: pointer">
             <input type="hidden" class="hidden-img" value="">
         </div>
-    </div>
-
-    <div class="col-xs-3">
+    </li>
+    <li class="col-xs-3">
         <div class="thumbnail">
             <div class="image-upload text-center">
                 <label for="file-input">
                     <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="opacity: 0.5; cursor: pointer">
                 </label>
                 <input id="file-input" type="file" class="ajax-file"/>
+            </div>
+        </div>
+    </li>
+</ol>
+
+
+
+
+
+
+
+
+<div class="title"><div>Видео товара</div></div>
+<br />
+<div class="form-group video">
+    <div class="col-xs-3">
+        <div class="thumbnail">
+            <div class="image-upload text-center">
+                <label>
+                    <img src="{{ asset('bundles/admin/icons/plus.png') }}" class="img-thumbnail" style="opacity: 0.5; cursor: pointer" data-toggle="modal" data-target="#video-load-modal">
+                </label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="video-load-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Загрузка видео</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form">
+                    <div class="form-group">
+                        <label class="col-xs-2">Название</label>
+                        <div class="col-xs-10">
+                            <input type="text" id="video_title" name="video[title]" required="required" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-2">Видео</label>
+                        <div class="col-xs-10">
+                            <input id="file-input" type="file" class="ajax-file" accept="video/*"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Омена</button>
+                <button type="button" class="btn btn-primary">Загрузить</button>
             </div>
         </div>
     </div>

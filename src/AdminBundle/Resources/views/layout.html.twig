@@ -18,11 +18,19 @@
         <script src="{{ asset('assets/vendor/bootstrap-treeview/src/js/bootstrap-treeview.js') }}"></script>
         <script src="{{ asset('assets/vendor/ckeditor/lang/ru.js') }}"></script>
         <script src="{{ asset('assets/vendor/ckeditor/ckeditor.js') }}"></script>
+
+
+        <script src="{{ asset('bundles/admin/javascripts/jquery-sortable.js') }}"></script> {# Сортировка Элементов https://johnny.github.io/jquery-sortable/ #}
+
         {#<script src="{{ asset('bundles/admin/javascripts/admin.js') }}"></script>#}
         <script src="{{ asset('assets/vendor/typeahead.js/dist/typeahead.bundle.min.js') }}"></script>
 
         <script>
             $(document).ready(function(){
+
+                $("ol").sortable();
+
+
                 $('.file').styler();
 
                 $('.ckeditor').each( function () {
@@ -59,6 +67,7 @@
         <link href="{{ asset('bundles/admin/less/admin.css') }}" rel="stylesheet">
         <link href="{{ asset('bundles/admin/less/well.css') }}" rel="stylesheet">
         <link href="{{ asset('bundles/admin/less/vertical-top.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/admin/less/sortable.css') }}" rel="stylesheet">
         {#<link href="font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">#}
         <style>
             .image-upload > input
@@ -80,6 +89,18 @@
             }
             .tt-suggestion.tt-selectable:hover{
                 background: #EEE;
+            }
+            .image-galery{
+                height: 165px;
+                position: relative;
+            }
+            .image-galery img{
+                position: absolute;
+                margin: auto;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
             }
         </style>
     {% endblock %}
