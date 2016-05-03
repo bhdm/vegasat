@@ -35,8 +35,17 @@
             var data = e.originalEvent.clipboardData.getData('Text');
             var text = '';
             Array.prototype.forEach.call(data.split('\n'), function (a) {
+                var b = [];
                 text += '<tr>';
-                var b = a.split('\t');
+                if (a.search('\t') != -1){
+                    b = a.split('\t');
+                }
+                if (a.search(':') != -1){
+                    b = a.split(':');
+                }
+                if (a.search(' - ') != -1){
+                    b = a.split(' - ');
+                }
                 text += '<td>'+b[0]+'</td>';
                 text += '<td><input type="text" class="form-control" value="'+b[1]+'"></td>';
                 text += '</tr>';
