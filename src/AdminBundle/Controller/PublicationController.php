@@ -65,7 +65,6 @@ class PublicationController extends Controller
         $item = $this->getDoctrine()->getRepository('AppBundle:Publication')->find($id);
         $form = $this->createForm(PublicationType::class, $item, array(
             'method' => 'POST',
-            'action' => $this->generateUrl('admin_publication_edit'),
         ));
         $formData = $form->handleRequest($request);
 

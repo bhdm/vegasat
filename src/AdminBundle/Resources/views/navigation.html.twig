@@ -1,6 +1,6 @@
 <ul id="navigation">
     <li>
-        <a href="#" id="menu-"><span class="icon "></span>Главная</a>
+        <a href="{{ path('admin_homepage') }}" id="menu-"><span class="icon "></span>Главная</a>
     </li>
     <li>
         <a href="{{ path('admin_category_list') }}" id="menu-catalog"><span class="icon catalog"></span>Каталог</a>
@@ -60,7 +60,7 @@
         </ul>
     </li>
     <li>
-        <a href="/admin/cms/page/index" id="menu-cms"><span class="icon cms"></span>CMS</a>
+        <a href="#" id="menu-cms"><span class="icon cms"></span>CMS</a>
         <ul>
             <li>
                 <a href="{{ path('admin_page_list') }}">Страницы</a>

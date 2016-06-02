@@ -65,7 +65,6 @@ class PageController extends Controller
         $item = $this->getDoctrine()->getRepository('AppBundle:Page')->find($id);
         $form = $this->createForm(PageType::class, $item, array(
             'method' => 'POST',
-            'action' => $this->generateUrl('admin_page_edit'),
         ));
         $formData = $form->handleRequest($request);
 
