@@ -1,83 +1,8 @@
 <div class="title"><div>Рекомендованные товары</div></div>
 <br />
-<div id="product-pattern" style="display: none;">
-    <div class="well">
-        <div class="form-group">
-            <label class="col-xs-2">Товар</label>
-            <div class="col-xs-10">
-                <input type="text" class="category-input  form-control">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="products">
-    <div class="well">
-        <div class="form-group">
-            <label class="col-xs-2">Товар</label>
-            <div class="col-xs-10">
-                <input type="text" class="category-input form-control">
-            </div>
-        </div>
-    </div>
-</div>
+{{ render(controller('AdminBundle:Api:getProductModal', {'type' : 'recomendated'})) }}
+
 <div class="text-right">
     <button type="button" class="btn btn-primary add-category">Добавить товар</button>
 </div>
 <br />
-<br />
-<script>
-    $(document).ready(function(){
-        function getTree() {
-            var tree = [
-                {
-                    text: "Категория 1",
-                    nodes: [
-                        {
-                            text: "Категория 1 1",
-                            nodes: [
-                                {
-                                    text: "Категория 1 1 1"
-                                },
-                                {
-                                    text: "Категория 1 1 2"
-                                }
-                            ]
-                        },
-                        {
-                            text: "Категория 1 2"
-                        }
-                    ]
-                },
-                {
-                    text: "Категория 2"
-                },
-                {
-                    text: "Категория 3"
-                },
-                {
-                    text: "Категория 4"
-                },
-                {
-                    text: "Категория 5"
-                }
-            ];
-            return tree;
-        }
-
-        $('.add-category').click(function(){
-            var t = $('#product-pattern').html();
-            $('.products').append(t);
-        });
-
-        $('.category-input').click(function(){
-            $('#selectCategory').modal();
-            $('#tree').treeview({data: getTree()});
-        });
-
-        $('.changeCategory').click(function(){
-            var category = $('.node-tree.node-selected').text();
-            $('.category-input').val(category);
-            $('#selectCategory').modal('hide');
-        });
-    })
-</script>

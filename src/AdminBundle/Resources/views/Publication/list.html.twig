@@ -1,0 +1,27 @@
+{% extends '@Admin/layout.html.twig' %}
+
+{% block body %}
+    <div class="well">
+        <div class="row">
+            <div class="col-xs-3">
+            </div>
+            <div class="col-xs-9">
+                <div class="text-right">
+                    <a href="{{ path('admin_publication_add') }}"><button class="btn btn-primary"  type="button" style=""><span class="glyphicon glyphicon-floppy-save">&nbsp;</span>Добавить</button></a>
+                </div>
+                <table class="table">
+                    {% for p in publications %}
+                        <tr>
+                            <td>{{ p.title }}</td>
+                            <td>{{ p.slug }}</td>
+                            <td>
+                                <a href="{{ path('admin_publication_edit',{'id' : p.id }) }}"><span class="glyphicon glyphicon-edit"></span></a>
+                                <a href="{{ path('admin_publication_edit',{'id' : p.id }) }}"><span class="glyphicon glyphicon-remove"></span></a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

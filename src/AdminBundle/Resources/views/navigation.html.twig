@@ -63,16 +63,10 @@
         <a href="/admin/cms/page/index" id="menu-cms"><span class="icon cms"></span>CMS</a>
         <ul>
             <li>
-                <a href="/admin/cms/page/index">Страницы</a>
+                <a href="{{ path('admin_page_list') }}">Страницы</a>
             </li>
             <li>
-                <a href="/admin/cms/news/index">Новости</a>
-            </li>
-            <li>
-                <a href="/admin/cms/contact/index">Контакты</a>
-            </li>
-            <li>
-                <a href="/admin/cms/media/index">Файлы</a>
+                <a href="{{ path('admin_publication_list') }}">Новости</a>
             </li>
         </ul>
     </li>

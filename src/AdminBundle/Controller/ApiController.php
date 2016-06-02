@@ -33,4 +33,22 @@ class ApiController extends Controller
         return new JsonResponse(['path' => $path]);
     }
 
+    
+    public function getProductModalAction($type,$categoryId = null){
+        $products = $this->getDoctrine()->getRepository('AppBundle:Product')->findBy(['enabled'=>true],['title'=>'ASC']);
+        $categories = $this->getDoctrine()->getRepository('AppBundle:Category')->findBy(['enabled'=>true],['title'=>'ASC']);
+
+        return $this->render('@Admin/Modal/products.html.twig',['products' => $products, 'type' => $type, 'categories' => $categories]);
+    }
+
+    /**
+     * @Route("get-products-json", name="get_products_json", options={"expose" = true})
+     */
+    public function getProductJsonAction(Request $request){
+        $productId = $request->request->get('category');
+        $category = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['id' => $productId]);
+        $products = $this->getDoctrine()->getRepository('AppBundle:Product')->findBy(['enabled'=>true, 'category' => $category],['title'=>'ASC']);
+
+        return new JsonResponse(['products' => $products]);
+    }
 }

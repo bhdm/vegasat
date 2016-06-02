@@ -1,0 +1,63 @@
+<div>
+    <form class="form-modal-product" data-type="{{ type }}">
+        <div class="row">
+            <div class="col-xs-4">
+                <select class="form-control form-modal-product-select-{{ type }}">
+                    <option></option>
+                    {% for c in categories %}
+                        <option value="{{ c.id }}">{{ c.title }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            {#<div class="col-xs-4">#}
+                {#<input type="text" class="form-control form-modal-product-input-{{ type }}">#}
+            {#</div>#}
+            <div class="col-xs-4">
+                <button type="button" class="btn btn-primary form-modal-product-btn" data-type="{{ type }}">Найти</button>
+            </div>
+        </div>
+    </form>
+    <br />
+    <table class="table table-{{ type }}" >
+        {% for p in products %}
+            <tr>
+                <td>
+                    <input type="checkbox" name="{{ type }}[{{ p.id }}]">
+                </td>
+                <td>
+                    {{ p.brand }} {{ p.model }} {{ p.title }}
+                    <br />
+                    <span style="color: #555; font-style: italic; font-size: 12px">{{ p.category }}</span>
+                </td>
+                <td>
+                    {{ p.price }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.form-modal-product-btn').click(function () {
+            var type = $(this).data('type');
+            var category = $('.form-modal-product-select-'+type).val();
+            $.ajax({
+                url: '{{ path("get_products_json") }}',
+                type: 'POST',
+                data: {'category' : category},
+                success: function ( products ) {
+                    txt = ''
+                    for (var i =0; i < products.length ; i ++){
+                        txt += '<tr>' +
+                                '<td><input type="checkbox" name=""></td>' +
+                                '<td>'+products[i].brand+' '+ products.model +' '+products.title +'</td>' +
+                                '<td>'+products.price+'</td>' +
+                                '</tr>'
+                    }
+                    $('.table-'+type).html(txt);
+                }
+            });
+        });
+    })
+</script>

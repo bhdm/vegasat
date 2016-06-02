@@ -2,8 +2,8 @@
 
 namespace AdminBundle\Controller;
 
-use AdminBundle\Form\PageType;
-use AppBundle\Entity\Page;
+use AdminBundle\Form\PublicationType;
+use AppBundle\Entity\Publication;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -13,32 +13,32 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
-class PageController extends Controller
+class PublicationController extends Controller
 {
     /**
      * @return Response
-     * @Route("/page/list", name="admin_page_list")
+     * @Route("/publication/list", name="admin_publication_list")
      * @Template()
      */
     public function listAction()
     {
-        $pages = $this->getDoctrine()->getRepository('AppBundle:Page')->findBy([], ['title' =>'ASC']);
+        $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy([], ['title' =>'ASC']);
 
-        return ['pages' => $pages];
+        return ['publications' => $publications];
     }
 
     /**
      * @return Response
-     * @Route("/page/add", name="admin_page_add")
-     * @Template("@Admin/Page/add.html.twig")
+     * @Route("/publication/add", name="admin_publication_add")
+     * @Template("@Admin/Publication/add.html.twig")
      */
     public function addAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $item = new Page();
-        $form = $this->createForm(PageType::class, $item, array(
+        $item = new Publication();
+        $form = $this->createForm(PublicationType::class, $item, array(
             'method' => 'POST',
-            'action' => $this->generateUrl('admin_page_add'),
+            'action' => $this->generateUrl('admin_publication_add'),
         ));
         $formData = $form->handleRequest($request);
 
@@ -56,16 +56,16 @@ class PageController extends Controller
 
     /**
      * @return Response
-     * @Route("/page/{id}/edit", name="admin_page_edit")
-     * @Template("@Admin/Page/add.html.twig")
+     * @Route("/publication/{id}/edit", name="admin_publication_edit")
+     * @Template("@Admin/Publication/add.html.twig")
      */
     public function editAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
-        $item = $this->getDoctrine()->getRepository('AppBundle:Page')->find($id);
-        $form = $this->createForm(PageType::class, $item, array(
+        $item = $this->getDoctrine()->getRepository('AppBundle:Publication')->find($id);
+        $form = $this->createForm(PublicationType::class, $item, array(
             'method' => 'POST',
-            'action' => $this->generateUrl('admin_page_edit'),
+            'action' => $this->generateUrl('admin_publication_edit'),
         ));
         $formData = $form->handleRequest($request);
 

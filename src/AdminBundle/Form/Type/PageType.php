@@ -29,14 +29,7 @@ class ProductType extends AbstractType
             ->add('priceSale', null, ['label' => 'Цена со скидкой'])
             ->add('priceWholesale', null, ['label' => 'Цена для опт'])
             ->add('priceUsd', null, ['label' => 'Цена USD'])
-            ->add('status',ChoiceType::class,  array(
-                'choices' => array(
-                    'В наличии' => true,
-                    'Нет в наличии' => false,
-                ),
-                'label' => 'Доступ',
-                'required'  => false,
-            ))
+            
 
 
 

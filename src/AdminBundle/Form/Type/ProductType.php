@@ -31,10 +31,11 @@ class ProductType extends AbstractType
             ->add('priceUsd', null, ['label' => 'Цена USD'])
             ->add('status',ChoiceType::class,  array(
                 'choices' => array(
-                    'В наличии' => true,
-                    'Нет в наличии' => false,
+                    'В наличии' => 1,
+                    'Нет в наличии' => 0,
+                    'Снят с производства' => -1,
                 ),
-                'label' => 'Доступ',
+                'label' => 'Статус',
                 'required'  => false,
             ))
 
@@ -48,15 +49,6 @@ class ProductType extends AbstractType
             ->add('description', null, ['label' => 'Описание', 'attr' => ['class' => 'ckeditor']])
             ->add('keywords', null, ['label' => 'Ключевые слова'])
 
-
-            ->add('enabled',ChoiceType::class,  array(
-                'choices' => array(
-                    'Открыт' => '1',
-                    'Закрыт' => '0',
-                ),
-                'label' => 'Доступ',
-                'required'  => false,
-            ))
         ;
     }
 

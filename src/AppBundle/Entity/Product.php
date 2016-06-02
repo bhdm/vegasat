@@ -107,9 +107,9 @@ class Product extends BaseEntity
     /**
      * @var boolean
      *
-     * @ORM\Column(name="status", type="boolean")
+     * @ORM\Column(name="status", type="integer")
      */
-    private $status;
+    private $status = 0;
 
 
     /**
@@ -179,6 +179,7 @@ class Product extends BaseEntity
         $this->images = new ArrayCollection();
         $this->equipment = new ArrayCollection();
         $this->status = 0;
+        $this->enabled = true;
     }
 
     /**
@@ -446,20 +447,22 @@ class Product extends BaseEntity
     }
 
     /**
-     * @return boolean
+     * @return integer
      */
-    public function isStatus()
+    public function getStatus()
     {
         return $this->status;
     }
 
     /**
-     * @param boolean $status
+     * @param integer $status
      */
     public function setStatus($status)
     {
         $this->status = $status;
     }
+
+
 
     /**
      * @return mixed
@@ -604,7 +607,8 @@ class Product extends BaseEntity
     {
         $this->code = $code;
     }
-
+    
+    
     
 
 }

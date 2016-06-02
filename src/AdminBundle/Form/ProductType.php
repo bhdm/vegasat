@@ -26,7 +26,16 @@ class ProductType extends AbstractType
             ->add('metaTitle', TextType::class, ['required' => false])
             ->add('metaKeyword', TextareaType::class, ['required' => false])
             ->add('metaDescription', TextareaType::class, ['required' => false])
-            ->add('enabled', CheckboxType::class,['required' => false, 'label' => ' '])
+//            ->add('enabled', CheckboxType::class,['required' => false, 'label' => ' '])
+            ->add('status',ChoiceType::class,  array(
+                'choices' => array(
+                    'В наличии' => 1,
+                    'Нет в наличии' => 0,
+                    'Снят с производства' => -1,
+                ),
+                'label' => 'Статус',
+                'required'  => true,
+            ))
 //            ->add('price', IntegerType::class)
 //            ->add('priceSale', IntegerType::class)
         ;
